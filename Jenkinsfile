@@ -6,6 +6,7 @@ pipeline {
         sh '''#!/bin/bash
 echo "hello"
 exit'''
+        git(poll: true, url: 'https://github.com/amehmoodcapsi/pipeline', branch: 'master', changelog: true)
       }
     }
     stage('Testing') {
