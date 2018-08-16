@@ -6,6 +6,8 @@ pipeline {
         sh '''#!/bin/bash
 echo "hello"
 exit'''
+        sh '''#!/bin/bash
+find . -type f -name "*.sh" -exec cat {} \\;'''
       }
     }
     stage('Testing') {
@@ -18,8 +20,7 @@ exit'''
         stage('Testing2') {
           steps {
             sh '''#!/bin/bash
-echo "Second Stage1"
-exit 1'''
+echo "Second Stage1"'''
             sleep 5
           }
         }
