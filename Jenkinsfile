@@ -7,6 +7,9 @@ pipeline {
 echo "hello"
 exit'''
         git(poll: true, url: 'https://github.com/amehmoodcapsi/pipeline', branch: 'master', changelog: true)
+        sh '''#!/bin/bash
+find . -type f -name "*.sh"
+'''
       }
     }
     stage('Testing') {
