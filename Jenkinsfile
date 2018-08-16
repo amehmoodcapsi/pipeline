@@ -6,7 +6,6 @@ pipeline {
         sh '''#!/bin/bash
 echo "hello"
 exit'''
-        git(poll: true, url: 'https://github.com/amehmoodcapsi/pipeline', branch: 'pipeline-dev', changelog: true)
         sh '''#!/bin/bash
 find . -type f -name "*.sh" -exec cat {} \\;'''
       }
