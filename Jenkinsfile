@@ -18,7 +18,8 @@ exit'''
         stage('Testing2') {
           steps {
             sh '''#!/bin/bash
-echo "Second Stage1"'''
+echo "Second Stage1"
+exit 1'''
             sleep 5
           }
         }
