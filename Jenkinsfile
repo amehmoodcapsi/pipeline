@@ -8,7 +8,7 @@ echo "hello"
 exit'''
       }
     }
-    stage('Second Stage') {
+    stage('Testing') {
       parallel {
         stage('Testing1') {
           steps {
